@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WhatstheWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="the-sun-in-the-sky.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Nay-m7-Ze9">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="831" id="8Nt-sy-1bv"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgh-4b-W0A">
+                                <rect key="frame" x="137" y="102" width="327" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="eh0-3b-cUh"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="What's the Weather?">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="35" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your city. " minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="64F-j1-oOo">
+                                <rect key="frame" x="137" y="171" width="327" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGj-XY-7Jf">
+                                <rect key="frame" x="390" y="221" width="74" height="35"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.67000000000000004" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Djb-9j-Bcp"/>
+                                    <constraint firstAttribute="width" constant="74" id="XMa-8m-OsX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Go">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="findWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u1F-fx-8ha"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="clip" numberOfLines="8" baselineAdjustment="none" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bb-dS-nuf">
+                                <rect key="frame" x="0.0" y="314" width="600" height="181"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qgh-4b-W0A" firstAttribute="leading" secondItem="64F-j1-oOo" secondAttribute="leading" id="3fL-L9-GqJ"/>
+                            <constraint firstItem="64F-j1-oOo" firstAttribute="top" secondItem="Qgh-4b-W0A" secondAttribute="bottom" constant="8" symbolic="YES" id="5VU-ps-Vfy"/>
+                            <constraint firstItem="Nay-m7-Ze9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7mM-1k-h2G"/>
+                            <constraint firstItem="64F-j1-oOo" firstAttribute="trailing" secondItem="RGj-XY-7Jf" secondAttribute="trailing" id="DDv-U6-Pfj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Bb-dS-nuf" secondAttribute="trailing" constant="131" id="EBv-fu-hJT"/>
+                            <constraint firstItem="5Bb-dS-nuf" firstAttribute="top" secondItem="RGj-XY-7Jf" secondAttribute="bottom" constant="105" id="Euu-BZ-M0l"/>
+                            <constraint firstItem="Nay-m7-Ze9" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="MTB-s8-2ti"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Bb-dS-nuf" secondAttribute="bottom" constant="165" id="N1Y-ZL-A3w"/>
+                            <constraint firstItem="5Bb-dS-nuf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="179" id="NgR-7f-tJs"/>
+                            <constraint firstItem="Nay-m7-Ze9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-106" id="ZK2-L5-f2f"/>
+                            <constraint firstItem="Qgh-4b-W0A" firstAttribute="trailing" secondItem="64F-j1-oOo" secondAttribute="trailing" id="dgh-Mb-39h"/>
+                            <constraint firstItem="RGj-XY-7Jf" firstAttribute="top" secondItem="64F-j1-oOo" secondAttribute="bottom" constant="23" id="tNj-La-UUd"/>
+                            <constraint firstItem="64F-j1-oOo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tcA-vt-JKU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="64F-j1-oOo" id="SkS-uK-SOf"/>
+                        <outlet property="resultLabel" destination="5Bb-dS-nuf" id="vqS-W0-nbE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="163" y="276"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="the-sun-in-the-sky.jpg" width="600" height="349"/>
+    </resources>
+</document>
